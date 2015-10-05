@@ -131,6 +131,16 @@ $\qed$
 \begin{question}[3]
 \end{question}
 \begin{solution}
+Consider the following two pairs of reals: $(1,1)$ and $(2,2)$.
+Then, by the given definition of addition, we have
+\eQb
+(1,1) + (2,2) &=& (5,7) \\
+(2,2) + (1,1) &=& (4,5). \\
+\eQe 
+Hence, we have that $(1,1) + (2,2) \neq (2,2) + (1,1)$. The given
+addition fails to be commutative. Therefore,
+the given set of pairs do not form a vector space under the given
+definitions. $\qed$
 \end{solution}
 
 \bigskip
@@ -168,9 +178,24 @@ or $W_2 \subseteq W_1$.
 \begin{question}[6]
 \end{question}
 \begin{solution}
-Let $V$ be a vector space and $x_1$ be a nonzero vector in $V$.
-Suppose that for all $l \in V'$, we have
-$l(x_1) = 0$ 
+Let $V$ be a vector space and $x_1$ be a nonzero vector in $V$. Let
+$V'$ be the dual of $V$. We argue that an identity map $I$, which is
+defined by $I(x) = x \> \forall x \in V$, is in $V'$.
+Let $x,y \in V$. Then, we have
+\eQb
+I(x+y) &=& x + y \\
+&=& I(x) + I(y). \\
+\eQe
+Since $x,y$ were arbitrary, we $I(x+y) = I(x) + I(y)$ for all $x,y$.
+Now, let $k$ be a scalar and $x \in V$. Then, we have
+\eQb
+I(kx) &=& kx \\
+&=& kI(x). \\
+\eQe
+Since $k,x$ were arbitrary, we have $I(kx) = kI(x)$ for all $x \in V$
+and all scalars. Therefore, $I$ is linear and is in $V'$. Notice that
+$I(x_1) = x_1 \neq 0$. Hence, we have found a map where $x_1$
+mapped to a non-zero element. $\qed$  
 \end{solution}
 
 \bigskip
@@ -178,18 +203,39 @@ $l(x_1) = 0$
 \begin{question}[7]
 \end{question}
 \begin{solution}
-We wish to show that the annihilator $Y^{+}$ is a subspace of the dual $V'$.
-Let $l_1 , l_2 \in Y^{+}$. Let $y \in Y$ and consider $l_1 + l_2$.
+We wish to show that the annihilator $Y^{\bot}$ is a subspace of the dual $V'$.
+Let $l_1 , l_2 \in Y^{\bot}$, and consider 
+$l_1 + l_2$.  Let $y \in Y$.
 Then, by definition of the annihilator, we have
 \eQb
 l_1+l_2(y) &=& l_1(y) + l_2(y) \\ 
-&=& 0 \\
+&=& 0. \\
 \eQe 
 Since $y$ was arbitrary, we have 
 \eQb
-l_1 + l_2(y) = 0 \forall y \in Y. 
+l_1 + l_2(y) = 0 \>\> \forall y \in Y. 
 \eQe
-Therefore, we have shown that $Y^{+}$ is a subspace of the dual $V'$.
+Therefore, $l_1 + l_2$ is in $Y^{\bot}$. \\
+
+\smallskip
+
+Now, let $l \in Y^{\bot}$, and consider $\alpha l$, where
+$\alpha$ is a scalar. Let $ y \in Y.$ 
+Then, again by definition of the annihilator, we have
+\eQb
+\alpha l(y) &=& (\alpha)l(y) \\
+&=& (\alpha)(0) \\
+&=& 0. \\
+\eQe
+Since $y$ was arbitrary, we have
+\eQb
+\alpha l(y) = 0 \>\> \forall y \in Y.
+\eQe
+Therefore, $\alpha l$ is in $Y^{\bot}$.
+As we have shown that $Y^{\bot}$ is closed under addition and
+scalar multiplication,
+we have shown that $Y^{\bot}$ is a subspace of the dual $V'$. $\qed$
+
 \end{solution}
 
 \bigskip
