@@ -243,6 +243,36 @@ we have shown that $Y^{\bot}$ is a subspace of the dual $V'$. $\qed$
 \begin{question}[8]
 \end{question}
 \begin{solution}
+Let $V$ be a finite dimensional vector space with two different bases
+$\{ x_1, ..., x_n \}$ and $\{ y_1, ..., y_n \}$. Let $v \in V$ and
+denote the cordinates of $v$ with respect to the $x$ basis and
+with respect to the $y$ basis respectively as
+\eQnb
+v &=& \sum_{i=1}^{n} a_i x_i \\ 
+v &=& \sum_{i=1}^{n} b_i y_i. 
+\eQne 
+Now, observe that each $y_i$ vector from the $y$ basis as a determined
+cordinates with respect to the $x$ basis. We write them as follows:
+\eQb
+y_i = \sum_{k=1}^{n} c_{ik}x_k,
+\eQe
+for $1 \leq i \leq n$. Now substituting the above equality into $(2)$,
+we obtain
+\eQb
+v &=& \sum_{i=1}^{n} (b_i\sum_{k=1}^{n} c_{ik}x_k),
+\eQe
+which can be re-written as
+\eQb
+v &=& \sum_{k=1}^{n}(\sum_{i=1}^{n} b_i c_{ik}) x_k.
+\eQe
+Hence, by matching the coefficients of the above equality to $(1)$ 
+and agreeing the dummy variables for indices,
+we have
+\eQb
+a_i &=& \sum_{k=1}^{n} b_k c_{ki},
+\eQe
+for $1 \leq i \leq n$. This deduction establishes the 
+required relation as desired. $\qed$
 \end{solution}
 
 \end{document}
