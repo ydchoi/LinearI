@@ -102,14 +102,22 @@ a_1 &=& 0 \\
 a_2 &=& 0 \\
 a_3 &=& 0. \\
 \eQe
-Hence, the three vectors, $u+v+w$, $v+w$ and $w$ are linearly independent.
-
-Since the set $\{ u,v,w \}$ are linearly independent, we have that $a_1 = 0$
-Hence, $u+v$ 
+Hence, the three vectors, $u+v+w$, $v+w$ and $w$ are linearly independent. Now,
+let $v \in V$. As $u,v,w$ is a basis for $v$, $v$ can be written as
+\eQb
+v &=& c_1u + c_2v + c_3w.
+\eQe
+The above equality can be re-expressed as
+\eQb
+v &=& c_1(u+v+w) + (c_2 - c_1)(v+w) + (c_3 - c_2)w. 
+\eQe
+Therefore $v$ can be written as a linear combination of $u+w+v$, $v+w$ and $w$.
+Since $v$ was arbitrary, we have shown that $u+v+w, v+w$ and $w$ span $V$.
+Therefore, $u+v+w, v+w$ and $w$ form a basis of $V$.
 $\qed$
 \end{solution}
 
-\bigskip
+\pagebreak
 
 \begin{question}[2]
 \end{question}
