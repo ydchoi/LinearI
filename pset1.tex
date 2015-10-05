@@ -80,19 +80,30 @@ of Linear Algebra I 2015 at Courant Institute of Mathematical Sciences.
 \begin{question}[1]
 \end{question}
 \begin{solution}
-We show that the three vectors $u+v+w$, $v+w$, and $w$ are linearly independent.
-Assume that 
+Let $u,v,w$ be a basis for a three dimensional vector space $V$. 
+We show that the three vectors $u+v+w$, $v+w$, and $w$ are linearly 
+independent. Assume that 
 \eQb
 a_1(u+v+w) + a_2(v+w) + a_3(w) &=& 0.
 \eQe
-This is equivalent to 
+Rearranging yields
 \eQb
-a_1u + (a_1+a_2)v + a_3(u+v+w) &=& 0.
+(a_1)u + (a_1+a_2)v + (a_1+a_2+a_3)w &=& 0.
 \eQe
-This is again equivalent to
+As $u,v,w$ form a basis, they are linearly independent. Hence, we have 
 \eQb
-a_1u + a_2v + a_3w &=& 0.
+a_1 &=& 0 \\
+a_1 + a_2 &=& 0 \\
+a_1 + a_2 + a_3 &=& 0. \\
 \eQe
+Solving the system yields
+\eQb
+a_1 &=& 0 \\
+a_2 &=& 0 \\
+a_3 &=& 0. \\
+\eQe
+Hence, the three vectors, $u+v+w$, $v+w$ and $w$ are linearly independent.
+
 Since the set $\{ u,v,w \}$ are linearly independent, we have that $a_1 = 0$
 Hence, $u+v$ 
 $\qed$
@@ -121,13 +132,14 @@ $\qed$
 \begin{solution}
 Let $W_1$ and $W_2$ be subspaces of $V$. First, assume that
 $W_1 \subseteq W_2$. Then, we have $W_1 \cup W_2 = W_2$. Since
-$W_2$ is a subspace, we have that $W_1 \cup W_2$ is a subspace. By symmetry, we also have
-if $W_2 \subseteq W_1$, then $W_1 \cup W_2$ is a subspace.
+$W_2$ is a subspace, we have that $W_1 \cup W_2$ is a subspace. By symmetry, we also have that if $W_2 \subseteq W_1$, then $W_1 \cup W_2$ is a subspace.
 
 \smallskip
 
 Now, assume that $W_1 \cup W_2$ is a subspace. 
-Suppose that $W_1 \setminus W_2 \neq \emptyset$. 
+Suppose for sake of contradiction that $W_1 \nsubseteq W_2$ and
+$W_1 \nsubseteq W_2$. 
+either $W_1 \setminus W_2 \neq \emptyset$ or  
 Let $x \in W_1$ and $y \in W_1 \setminus W_2$.
 
 
@@ -148,7 +160,9 @@ or $W_2 \subseteq W_1$.
 \begin{question}[6]
 \end{question}
 \begin{solution}
-Assume that 
+Let $V$ be a vector space and $x_1$ be a nonzero vector in $V$.
+Suppose that for all $l \in V'$, we have
+$l(x_1) = 0$ 
 \end{solution}
 
 \bigskip
@@ -156,6 +170,18 @@ Assume that
 \begin{question}[7]
 \end{question}
 \begin{solution}
+We wish to show that the annihilator $Y^{+}$ is a subspace of the dual $V'$.
+Let $l_1 , l_2 \in Y^{+}$. Let $y \in Y$ and consider $l_1 + l_2$.
+Then, by definition of the annihilator, we have
+\eQb
+l_1+l_2(y) &=& l_1(y) + l_2(y) \\ 
+&=& 0 \\
+\eQe 
+Since $y$ was arbitrary, we have 
+\eQb
+l_1 + l_2(y) = 0 \forall y \in Y. 
+\eQe
+Therefore, we have shown that $Y^{+}$ is a subspace of the dual $V'$.
 \end{solution}
 
 \bigskip
