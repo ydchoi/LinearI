@@ -155,14 +155,16 @@ $W_2$ is a subspace, we have that $W_1 \cup W_2$ is a subspace. By symmetry, we 
 \smallskip
 
 Now, assume that $W_1 \cup W_2$ is a subspace. 
-Suppose for sake of contradiction that $W_1 \nsubseteq W_2$ and
-$W_1 \nsubseteq W_2$. 
-either $W_1 \setminus W_2 \neq \emptyset$ or  
-Let $x \in W_1$ and $y \in W_1 \setminus W_2$.
-
-
-Hence, we have shown that $W_1 \cup W_2$ is a subspace iff $W_1 \subseteq W_2$
-or $W_2 \subseteq W_1$.  
+Suppose for sake of contradiction that $W_1 \nsubseteq W_2$ and $W_2 \nsubseteq W_1$.
+Then, we have $u \in W_1 \setminus W_2$ and $v \in W_2 \setminus W_1$. Since $u,v \in W_1 
+\cup W_2$, and $W_1 \cup W_2$ is a subspace, we have $u + v \in W_1 \cup W_2$. Hence,
+$u + v$ is in either $W_1$ or $W_2$. If $u + v \in W_1$, then $u - u + v = w \in W_1$,
+which is a contradiction. If $u + v\in W_2$, then $u + v - v = u \in W_2$, which is
+a contradiction. Hence, in both cases we get contradictions, and we have that
+$W_1 \subseteq W_2$ or $W_2 \subseteq W_1$.
+Therefore,
+we have shown that $W_1 \cup W_2$ is a subspace iff $W_1 \subseteq W_2$
+or $W_2 \subseteq W_1$. $\qed$ 
 
 \end{solution}
 
@@ -200,9 +202,28 @@ We now claim that $f_1$ and $f_2$ are linearly independent. Assume that
 \eQb
 a_1 f_1 + a_2 f_2 &=& 0,
 \eQe
-Hence $a_1, a_2 = 0$. Therefore, we have shown that 
+which denotes an identically zero map, where $a_1$ and $a_2$ are the scalars.
+Substituting the integral yields
+\eQb
+a_1 \int_{0}^{1} a + bt dt + a_2 \int_{1}^{2} a + bt dt &=& 0\\
+a_1(a + \dfrac{b}{2}) + a_2 (2a + 2b)  &=& 0\\
+a(a_1 + 2a_2) + b(\dfrac{a_1}{2} + 2a_2) &=& 0. \\
+\eQe
+Since the above equation holds for all $a,b$ we have that
+\eQb
+a_1 + 2a_2 &=& 0 \\
+\dfrac{a_1}{2} + 2a_2 &=& 0 \\
+\eQe
+Solving the system gives $a_1, a_2 = 0$. Therefore, we have shown that
+$f_1$ and $f_2$ are linearly independent.
 
-Since we know that $dim P_1(\mathbb{R}) = 2$, and th
+\smallskip
+
+From the property of the dual space, we know that a dual space has the same dimension
+as the original space, which was proven in class. Hence, 
+since $P_1(\mathbb{R})$ has dimension $2$, the dual also has dimension $2$. Now,
+as $\{ f_1 , f_2 \}$ form a linear independent set with dimension exactly two,
+we have that $\{ f_1 , f_2 \}$ forms a basis of the dual space. $\qed$
 \end{solution}
 
 \bigskip
