@@ -122,6 +122,48 @@ $\qed$
 \begin{question}[2]
 \end{question}
 \begin{solution}
+First of all, we have that $W_1 \cap W_2$ is a subspace, proven in class.
+Since $W_1 \cap W_2 \subseteq W_1$,
+and $W_1$ is finite dimensional, we have that $\mathrm{dim}(W_1 \cap W_2) \leq \mathrm{dim}(
+W_1)$. Therefore, there exists a basis for $W_1 \cap W_2$, which can be written as
+\eQb
+\{ x_1, x_2, ..., x_n \},
+\eQe
+where $n$ denotes the dimension of $W_1 \cap W_2$. Now, we have from class that as $W_1$ is finite
+dimensional, and the set $\{ x_1 , ... x_n \}$ forms a set of linearly independent vectors
+in $W_1$ such that $n \leq \mathrm{dim}(W_1)$, we can extend the set to form a basis of $W_1$.
+Similarly, the set can be extended to $W_2$ by the same argument. Hence, we have
+\eQb
+\{ x_1 , ... , x_n, ... , y_{n+l} \} \\
+\{ x_1, ... , x_n, ..., z_{n+k} \} \\,
+\eQe
+such that both sets are the basis of $W_1$ and $W_2$ respectively
+with $n+l$ and $n+k$ being their dimension sizes. Note that if $l = 0$, $k = 0$,
+then the extension is the original set itself, which is possible in cases like $W_1 = W_1 \cap W_2$.
+Now, consider the following concactanation from the above two sets:
+\eQb
+B &=& \{ x_1, ..., x_n, ..., y_{n+l}, ... z_{n+l+k} \}.
+\eQe
+We now claim that the above set forms a basis of $W_1 + W_2$. First of all, it is trivial to see
+that the above set spans $W_1 + W_2$. Let $v \in W_1 + W_2$. By definition, we have $v = x+y$,
+such that $x \in W_1$ and $y \in W_2$. We have the basis of $W_1$ and $W_2$ included in the 
+vector set, $B$. Therefore, $x$ and $y$ can be written as linear combinations of the vectors
+from $B$ and the addition of those two, which is still a linear combination, results in $v$.
+Hence, the set $B$ spans $W_1 + W_2$. Now, it remains to be shown that $B$ is linearly
+independent. First of all, we have that $\{ x_1 , ... y_{n+l} \}$ is linearly independent,
+as it is the basis of $W_1$. Now, the new set $\{ z_{n+1}, ... z_{n+k} \}$ must be linearly
+independent from $\{ x_1, ..., y_{n+1} \}$, as otherwise one of $z$ vector
+should have been included in the $x$ set. Therefore, the set $B$ is linearly independent.
+Hence, we have shown that $B$ is a basis of $W_1 + W_2$, which results in $W_1 + W_2$ being
+a finite dimensional subspace of $V$. Now, notice that $B$ has a dimenision of $n+l+k$,
+where $n$ denotes the dimension of $W_1 \cap W_2$ and $n+l$ denotes the dimension of $W_1$
+and $n+k$ denotes the dimension of $W_2$. Therefore, we have
+\eQb
+dim(W_1 + W_2) &=& n+l +k \\
+&=& (n+l) + (n+k) - n \\
+&=& dim(W_1) + dim(W_2) - dim(W_1 \cap W_2), \\
+\eQe
+which completes the proof. $\qed$
 
 \end{solution}
 
