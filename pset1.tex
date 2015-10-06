@@ -171,6 +171,38 @@ or $W_2 \subseteq W_1$.
 \begin{question}[5]
 \end{question}
 \begin{solution}
+Let $p_1(x)$ and $p_2(x) \in P_1(\mathbb{R})$. First, note that
+polynomials are integrable, hence the integrals are well-defined.
+By the linearity of integration, we have
+\eQb
+f_1(p_1(x) + p_2(x)) &=& \int_{0}^{1} p_1(t) + p_2(t) dt \\
+&=& \int_{0}^{1} p_1(t) dt + \int_{0}^{1} p_2(t) dt \\
+&=& f_1(p_1(x)) + f_1(p_2(x)), \\
+f_2(p_1(x) + p_2(x)) &=& \int_{1}^{2} p_1(t) + p_2(t) dt \\
+&=& \int_{1}^{2} p_1(t) dt + \int_{1}^{2} p_2(t) dt \\
+&=& f_2(p_1(x)) + f_2(p_2(x)). \\
+\eQe
+For a scalar $\alpha$ and $p(x) \in P_1(\mathbb{R})$,
+by the linearity of integration again,
+\eQb
+f_1(\alpha p(x)) &=& \int_{0}^{1} \alpha p(t) dt \\
+&=& \alpha \int_{0}^{1} p(t) dt \\
+&=& \alpha f_1(p(x)), \\
+f_2(\alpha p(x)) &=& \int_{1}^{2} \alpha p(t) dt \\
+&=& \alpha \int_{1}^{2} p(t) dt \\
+&=& \alpha f_2(p(x)).
+\eQe
+Therefore, both $f_1$ and $f_2$ are linear functionals and are in the dual of $P_1(\mathbb{R})$.
+
+\smallskip
+
+We now claim that $f_1$ and $f_2$ are linearly independent. Assume that
+\eQb
+a_1 f_1 + a_2 f_2 &=& 0,
+\eQe
+Hence $a_1, a_2 = 0$. Therefore, we have shown that 
+
+Since we know that $dim P_1(\mathbb{R}) = 2$, and th
 \end{solution}
 
 \bigskip
