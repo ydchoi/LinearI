@@ -80,35 +80,198 @@ of Linear Algebra I 2015 at Courant Institute of Mathematical Sciences.
 \begin{question}[1]
 \end{question}
 \begin{solution}
-\end{question}
+By the definition of the map $O$,
+and the fact that $0x = 0$ for all $x \in X$, as $X$ is a linear space,
+we have  
+\eQb
+O(ax) &=& 0 \\
+&=& a 0 \\
+&=& a O(x), \\
+\eQe
+for all $x \in X$.
+Furthermore, again by the definition of the map $O$, it follows that
+\eQb
+O(x+y) &=& 0 \\
+&=& 0 + 0 \\
+&=& O(x) + O(y),
+\eQe
+for all $x,y \in X$.
+Therefore, we have shown that $O$ is linear. 
 
+\smallskip
+Let $A$ be another map such that $A \circ A  = O$. Note that this implicitly 
+gives that the linear space $X$ under consideration is a non-trivial one, as
+otherwise the only map available is $O$.  
+Suppose for sake of contradiction that there exists an inverse map 
+of $A$, denoted by $A^{-1}$. Note that by the existence of an inverse map,
+$A$ and $A^{-1}$ are bijective maps, and thus the domain and range of these
+maps are all $X$. Observe that $O \circ A^{-1} = O$. 
+By using the associativity of map composition,
+$O = A \circ A$ and $O = O \circ A^{-1}$, we have
+\eQb
+I &=& A \circ A^{-1} \\
+&=& A \circ I \circ A^{-1} \\ 
+&=& (A \circ A) \circ A^{-1} \circ A^{-1} \\
+&=& (O \circ A^{-1}) \circ A^{-1} \\
+&=& O \circ A^{-1} \\
+&=& O. 
+\eQe
+We have reached a conclusion that $I = O$. 
+As discussed before, the linear space $X$ is nontrivial. 
+Hence, $I = O$ is a contradiction. Consequently,
+$A$ does not have an inverse map.
+\hfill $\qed$ 
 
-\bigskip
+\end{solution}
+
+\pagebreak
 
 \begin{question}[2]
 \end{question}
 \begin{solution}
-\end{question}
+Let $x \in X$. Consider $[A,[B,C]] + [C,[A,B]] + B,[C,A]](x)$. Given the
+definition of the commutator, it follows that
+\eQb
+[A,[B,C]](x) &=& [A, B\circ C - C\circ B](x) \\
+&=& (A \circ (B\circ C - C \circ B) - (B \circ C - C \circ B) \circ A)(x) \\
+&=& (A \circ B \circ C - A \circ C \circ B - B \circ C \circ A +
+C \circ B \circ A)(x). \\
+\eQe
+By the associativity of map composition and the linearity of the maps, which
+is called "Composition is distributive with respect to the addition of
+linear maps" in Lax, 
+it follows that
+\eQb
+[A[B,C]](x) &=& 
+(A \circ B \circ C)(x) - (A \circ C \circ B)(x) - (B \circ C \circ A)(x)
++ (C \circ B \circ A)(x) \\
+&=& A(B(C(x))) - A(C(B(x))) - B(C(A(x))) + C(B(A(x))).
+\eQe
+By symmetry, it follows that
+\eQb
+[C,[A,B]](x) &=& C(A(B(x))) - C(B(A(x))) - A(B(C(x))) + B(A(C(x))), \\ 
+\eQe
+and 
+\eQb
+[B,[C,A]](x) &=& B(C(A(x))) - B(A(C(x))) - C(A(B(x))) + A(C(B(x))) \\.
+\eQe
+It follows that 
+\eQb
+[A,[B,C]] + [C,[A,B]] + [B,[C,A]](x) &=& 0.
+\eQe
+As $x$ was arbitrary, we have shown that $[A,[B,C]] + [C,[A,B]] + [B,[C,A]] =
+O$. 
+\hfill $\qed$
+\end{solution}
 \bigskip
 
 \begin{question}[3]
 \end{question}
 \begin{solution}
-\end{question}
-\bigskip
+Let $T$ be a linear map, and $T^{'}$ be a transpose map of $T$. Assume
+that $T$ and $T^{'}$ are both invertible. The statement that we want
+to show asserts that
+\eQb
+(T^{-1})^{'} &=& (T^{'})^{-1},
+\eQe 
+which states that $(T^{-1})^{'}$ is the inverse of $T^{'}$. By the definition
+of inverse, it suffices to show that
+\eQb
+T^{'}(T^{-1})^{'} &=& I^{'}, \\
+(T^{-1})^{'}T^{'} &=& I^{'}. \\
+\eQe
+We have previously shown in class that for any linear map $(ST)^{'} = 
+T^{'}S^{'}$. It follows that 
+\eQb
+T^{'}(T^{-1})^{'} &=& (T^{-1}T)^{'} \\ 
+&=& I^{'}, \\
+(T^{-1})^{'}T^{'} &=& (T T^{-1})^{'} \\ 
+&=& I^{'}. \\
+\eQe 
+\hfill $\qed$
+\end{solution}
+
+\pagebreak 
 
 \begin{question}[4]
 \end{question}
 \begin{solution}
-\end{question}
+We have that the dimension of the range space of $T$ is $1$. Let $r$ 
+be the vector that spans the range space. Extend the set $\{ r\}$ 
+with linearly independent vectors to obtain the basis set that spans $X$ 
+entire space. Denote this set as $\{ r, v_1, ..., v_{n-1} \}$. Observe
+that $T(v_i) = 0$ for all $i$ as they belong to the null-space. Let
+$x \in X$. Then, there exists a set of scalars such that
+\eQb
+x &=& a_1 r + a_2 v_1 ... + a_n v_{n-1} .
+\eQe
+Consider $T(x)$. As $\{r\}$ spans the range space, there exists a scalar
+$c$ such that $T(x) = cr$. 
+It follows that
+\eQb
+tr &=& T(a_1 r + a_2 v_1 ... + a_n v_{n-1}), \\
+\eQe 
+which by linearity of $T$ and the property of null-space mentioned above,
+can be simplified as,
+\eQb
+cr &=& rT(a_1) + a_2T(v_1) ... + a_n T(v_{n-1}), \\
+&=& rT(a_1). \\
+\eQe
+Hence, we have $c = T(a_1)$. It follows that
+\eQb
+T^2(x) &=& T(T(x)) \\
+&=& T(cr) \\
+&=& cT(r) \\
+&=& cT(x). \\
+\eQe 
+
+We have shown that $T^2 = cT$. Now, assume that $c \neq 1$. 
+Consider the linear map $I + \dfrac{1}{1-c}T$. By the linearity of 
+maps, which allows the compositions to distribute, it follows that
+\eQb
+(I - T) \circ (I + \dfrac{1}{1-c}T) &=& I \circ I 
++ I \circ \dfrac{1}{1-c}T - T\circ I - T \circ \dfrac{1}{1-c}T \\
+&=& I + \dfrac{1}{1-c}T - T - \dfrac{1}{1-c}T^2 \\
+&=& I + \dfrac{1}{1-c}T - T - \dfrac{c}{1-c}T \\
+&=& I. \\ 
+\eQe
+Hence, we have shown that if $c \neq 1$, $I - T$ is invertible.
+\hfill $\qed$ 
+\end{solution}
 \bigskip
 
 \begin{question}[5]
 \end{question}
 \begin{solution}
-Observe that 
-
-\end{question}
+Let $A$ and $B$ be a $2 \times 2$ matrix such that
+\eQb
+A &=& \begin{bmatrix}
+1 & 1 \\
+1 & 1 \\
+\end{bmatrix} \\
+B &=& \begin{bmatrix}
+1 & 1 \\
+-1 & -1 \\
+\end{bmatrix}.
+\\
+\eQe 
+Observe that both $A$ and $B$ are nonzero matrices and  
+\eQb
+AB &=& \begin{bmatrix}
+1 & 1 \\
+1 & 1 \\
+\end{bmatrix}
+\begin{bmatrix}
+1 & 1 \\
+-1 & -1 \\
+\end{bmatrix} = 
+\begin{bmatrix}
+0 & 0 \\
+0 & 0 \\
+\end{bmatrix}.
+\eQe
+\hfill $\qed$
+\end{solution}
 
 \bigskip
 
