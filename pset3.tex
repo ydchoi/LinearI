@@ -169,6 +169,18 @@ is similar to $A$.
 From the theorem 12 from Lax's Linear Algebra in pg.73, which has a proof,
 we have that $A$ and $D$ have the same eigenvalues. Since the diagonal 
 entires are precisely the set of eigenvalues for diagonal matrices, and
+the $A$ matrix can only have one possible eigenvalue, $D$ also can only 
+have one posible eigenvalue, which we denote as $\lambda$. Hence, it 
+follows that
+\eQb
+D &=& \lambda I \\
+A &=& SDS^{-1} \\
+&=& S\lambda I S^{-1} \\
+&=& \lambda SS^{-1} \\
+&=& \lambda I.
+\eQe
+Hence, we have shown that $A$ is a multiple of the identity matrix.
+\hfill $\qed$
 
 \end{solution}
 
