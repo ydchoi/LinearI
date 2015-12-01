@@ -1,0 +1,155 @@
+\documentclass{article} % For LaTeX2e
+\usepackage{nips14submit_e,times}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+%\documentstyle[nips14submit_09,times,art10]{article} % For LaTeX 2.09
+
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\def\eQb#1\eQe{\begin{eqnarray*}#1\end{eqnarray*}}
+\def\eQnb#1\eQne{\begin{eqnarray}#1\end{eqnarray}}
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\providecommand{\pb}[0]{\pagebreak}
+
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+\def\Qb#1\Qe{\begin{question}#1\end{question}}
+\def\Sb#1\Se{\begin{solution}#1\end{solution}}
+
+\newenvironment{claim}[1]{\par\noindent\underline{Claim:}\space#1}{}
+\newtheoremstyle{quest}{\topsep}{\topsep}{}{}{\bfseries}{}{ }{\thmname{#1}\thmnote{ #3}.}
+\theoremstyle{quest}
+\newtheorem*{definition}{Definition}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{question}{Question}
+\newtheorem*{preposition}{Preposition}
+\newtheorem*{exercise}{Exercise}
+\newtheorem*{challengeproblem}{Challenge Problem}
+\newtheorem*{solution}{Solution}
+\newtheorem*{remark}{Remark}
+\usepackage{verbatimbox}
+\usepackage{listings}
+\title{Linear Algebra I: \\
+Problem Set II}
+
+
+\author{
+Youngduck Choi \\
+CIMS \\
+New York University\\
+\texttt{yc1104@nyu.edu} \\
+}
+
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to \LaTeX{} to determine where to break
+% the lines. Using \AND forces a linebreak at that point. So, if \LaTeX{}
+% puts 3 of 4 authors names on the first line, and the last on the second
+% line, try using \AND instead of \And before the third author name.
+
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+
+\nipsfinalcopy % Uncomment for camera-ready version
+
+\begin{document}
+
+
+\maketitle
+
+\begin{abstract}
+This work contains the solutions to the problem set II
+of Linear Algebra I 2015 at Courant Institute of Mathematical Sciences.
+\end{abstract}
+
+\bigskip
+
+\begin{question}[1]
+\end{question}
+\begin{solution}
+\end{solution}
+
+\pagebreak
+
+\begin{question}[2]
+\end{question}
+\begin{solution} Let $A$ and $B$ be square matrices. Assume that $AB$ is
+invertible.  
+\end{solution}
+
+\newpage
+
+\begin{question}[3]
+\end{question}
+\begin{solution}
+Let $A$ be a square matrix.
+From the matrix multiplication rule, we have
+\eQb
+(A A^T)_{ii} &=& \sum_{k} a_{ik}b_{ki}, \\
+\eQe
+where $a_{ik}$ denotes the $(i,k)$th entry of the matrix $A$ and
+$b_{ki}$ denotes the $(k,i)$th entry of the matrix $A^T$. By 
+definition of transpose, it follows that $a_{ik} = b_{ki}$, and 
+we obtain
+\eQb 
+(A A^T)_{ii} &=& \sum_{k} a_{ik}^2.
+\eQe
+Therefore, by definition of trace, we have
+\eQb
+\text{tr}(AA^T) &=& \sum_{i,k} a_{ik}^2.
+\eQe
+Since $a_{ik}^2 \geq 0$ for all $i,k$, it follows that
+\eQb
+\text{tr}(AA^T) &\geq& 0.
+\eQe
+\hfill $\qed$
+
+\end{solution}
+
+\pagebreak 
+
+\begin{question}[4]
+\end{question}
+\begin{solution}
+\end{solution}
+\bigskip
+
+\begin{question}[5]
+\end{question}
+\begin{solution}
+
+\end{solution}
+
+\bigskip
+
+\begin{question}[6]
+\end{question}
+\begin{solution}
+We are given that $\det(A) = \det(A^T)$. Let $\lambda$ be an eigenvalue
+of $A$. It follows that $\det(A - \lambda I ) = 0$. Since
+$\det(A) = \det(A^T)$, we have 
+\eQb
+\det(A -\lambda I) &=& \det((A - \lambda I)^T) \\
+&=& \det(A^T - \lambda I). \\
+\eQe 
+Hence, $\det(A^T - \lambda I) = 0$ holds as well.
+Therefore, $\lambda$ is an eigenvalue of $A^T$.
+Since $\lambda$ was an arbitrary eigenvalue of $A$, we have shown that 
+any eigenvalue of $\lambda$ of $A$ is also an eigenvalue of $A^T$.
+\hfill $\qed$ 
+\end{solution}
+
+\end{document}
